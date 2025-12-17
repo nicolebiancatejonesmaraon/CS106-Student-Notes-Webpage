@@ -1,0 +1,84 @@
+/* public/style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4a69bd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#note-form, .controls {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#note-form input[type="text"], 
+#note-form textarea, 
+#note-form select, 
+#note-form button,
+.controls select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+#note-form button {
+    background-color: #78a1a1;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.note-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    border-left: 5px solid;
+}
+
+.note-card.personal { border-left-color: #f39c12; background-color: #fff8e1; }
+.note-card.school { border-left-color: #2980b9; background-color: #e6f7ff; }
+.note-card.other { border-left-color: #27ae60; background-color: #e8f8f5; }
+
+.note-card.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.note-card .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.note-card .actions .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}

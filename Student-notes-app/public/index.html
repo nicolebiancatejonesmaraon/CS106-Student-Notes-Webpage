@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notes and Reminders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Notes & Reminders</h1>
+    </header>
+
+    <div class="container">
+        <form id="note-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="content" placeholder="Content..."></textarea>
+            
+            <div class="form-group">
+                <select id="category">
+                    <option value="Personal">Personal</option>
+                    <option value="School">School</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="date" id="due-date">
+            </div>
+            
+            <button type="submit">Add Note/Reminder</button>
+        </form>
+
+        <div class="controls">
+            <label for="filter-category">Filter by Category:</label>
+            <select id="filter-category">
+                <option value="All">All Categories</option>
+                <option value="Personal">Personal</option>
+                <option value="School">School</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        
+        <div id="notes-list" class="notes-grid">
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
